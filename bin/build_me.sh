@@ -31,6 +31,6 @@ bundle exec jekyll serve
 rm -r _site/
 rm -r venv/
 rm -r _includes/rsg/*-lesson/
-rm favicons/rsg/apple* favicons/rsg/favicon* favicons/rsg/mstile*
+rm assets/favicons/rsg/apple* assets/favicons/rsg/favicon* assets/favicons/rsg/mstile*
 
 git checkout main
