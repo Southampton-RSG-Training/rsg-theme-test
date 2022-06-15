@@ -11,7 +11,15 @@ Some old research projects may be in Python 2 but Python 2 has been retired and 
 Download the latest Anaconda Windows installer. Double-click the installer and follow the instructions. **When asked “Add Anaconda to my PATH environment variable”, answer “yes”. It will warn you not to, but it's required for it to be found by git bash** After it’s finished, close and reopen any open terminals to reload the updated PATH and allow the installed Python to be found.
 
 Once the Anaconda installation is finished you will be asked if you want the installer to initialize Anaconda3 by
-running conda init? You should select yes.
+running conda init? You should select yes. Alternatively/additionally you will need to run the following command in 
+GitBash
+
+{: .bash}
+~~~
+conda init bash
+~~~
+
+Then close and reopen GitBash.
 
 Please test the python install open GitBash (or your favorite terminal) and run the following command to verify that the installation was successful.
 
