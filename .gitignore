@@ -6,7 +6,8 @@
 .jekyll-cache/
 .jekyll-metadata
 __pycache__
-_site
+_site/
+venv/
 .Rproj.user
 .Rhistory
 .RData

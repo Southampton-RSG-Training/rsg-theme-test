@@ -147,9 +147,7 @@ In this case,
 > * B and C
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > if 4 > 5:
 >     print('A')
@@ -160,9 +158,7 @@ In this case,
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > B gets printed. The first condition, `4 > 5` is not true so it moves 
 > > to the next elif, but `4 <= 5` is true so that statement executes 
@@ -180,9 +176,7 @@ In this case,
 > explain what the rule is for which values are considered true and which are considered false.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > if '':
 >     print('empty string is true')

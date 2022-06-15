@@ -118,9 +118,7 @@ Therefore, when you now split with space as the separator, you should get only t
 > > On the `scientificName` column, click the down arrow next to the `scientificName` column and 
 > > choose `Edit Column` > `Split into several columns...` from the drop down menu. Use a blank character as a separator, 
 > > as before. You should now get only two columns `scientificName 1` and `scientificName 2`.
-> 
-{: .solution}
-
+> {: .solution}
 {: .challenge}
  
 ## Renaming columns
@@ -143,9 +141,7 @@ We want to rename these as `genus` and `species`, respectively.
 > > with the same name where we've recorded the species abbreviation. 
 > > 4. You can choose another name like `speciesName` for this column or change the other
 > > `species` column name to `species_abbreviation` and then come back and rename this column to `species`.
-> 
-{: .solution}
-
+> {: .solution}
 {: .challenge}
 
 **Important:** Undo the splitting and renaming steps and retain the white space trimming step 

@@ -95,20 +95,6 @@ lessons:
       - 10:00 am
     order: 6
 
-  - title: Data Analysis and Visualization in R
-    gh-name: r-novice
-    type: episode_r
-    branch: main
-    date:
-      - 15 January 2022
-      - 16 January 2022
-      - 17 January 2022
-    start-time:
-      - 15:00
-      - 15:00
-      - 15:00
-    order: 7
-
 # Specify that things in the episodes collection should be output.
 collections:
   episodes:
@@ -162,7 +148,7 @@ repository: <USERNAME>/<PROJECT>
 email: "rsginfo@soton.ac.uk"
 
 # Using the new jekyll remote themes
-remote_theme: carpentries/carpentries-theme
+remote_theme: Southampton-RSG-Training/rsg-theme
 
 # Sites.
 amy_site: "https://amy.carpentries.org/"

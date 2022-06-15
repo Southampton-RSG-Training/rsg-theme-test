@@ -147,16 +147,12 @@ the tabs '2013' and '2014', respectively.
 > > ## Keep your raw data - raw
 > > Do not forget to create a new file or a new tab for the cleaned data; never
 > > modify your original (raw) data.
-> 
-{: .callout}
-
+> {: .callout}
 >
 > > ## Solution
 > > All the mistakes in this messy dataset are addressed in the [next episode](../02-common-mistakes).
 > > You can refer to it to check if you spotted them all and go back and fix your spreadsheet.
-> 
-{: .solution}
-
+> {: .solution}
 {: .challenge}
 
 > ## Full & clean dataset

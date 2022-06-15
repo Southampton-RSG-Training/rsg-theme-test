@@ -128,9 +128,7 @@ NameError: name 'count' is not defined
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > for number in range(10):
 >     # use a if the number is a multiple of 3, otherwise use b
@@ -142,9 +140,7 @@ NameError: name 'count' is not defined
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > 3 `NameError`s for `number` being misspelled, for `message` not defined, and for `a` not being in quotes.
 > >
@@ -241,9 +237,7 @@ it *always* means that there is a problem with how your code is indented.
 > while the third line uses four spaces:
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > def some_function():
 >     msg = "hello, world!"
@@ -251,9 +245,7 @@ it *always* means that there is a problem with how your code is indented.
 >     return msg
 > ~~~
 >
-> 
-{: .error}
-
+> {: .error}
 > ~~~
 >  File "hello_world.py", line 4
 >    return msg
@@ -275,9 +267,7 @@ it *always* means that there is a problem with how your code is indented.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > def another_function
 >   print("Syntax errors are annoying.")
@@ -286,18 +276,14 @@ it *always* means that there is a problem with how your code is indented.
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > `SyntaxError` for missing `():` at end of first line,
 > `IndentationError` for mismatch between second and third lines.
 > > A fixed version is:
 > >
 > >
-> > 
-> {: .python}
-> 
+> > {: .python}
 > > ~~~
 > > def another_function():
 > >     print("Syntax errors are annoying.")
@@ -354,26 +340,20 @@ meaning we tried to access a list index that did not exist.
 > 3. Fix the error.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > `IndexError`; the last entry is `seasons[3]`, so `seasons[4]` doesn't make sense.
 > > A fixed version is:
 > >
 > >
-> > 
-> {: .python}
-> 
+> > {: .python}
 > > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[-1])
@@ -467,9 +447,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > 5.  What is the error message?
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > # This code has an intentional error. Do not type it directly;
 > # use it for reference to understand the error message below.
@@ -491,9 +469,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > print_friday_message()
 > ~~~
 >
-> 
-{: .error}
-
+> {: .error}
 > ~~~
 > Traceback (most recent call last):
 >   File "test.py", line 18, in <module>
@@ -506,9 +482,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > 1. 3 levels
 > > 2. `print_message`
@@ -597,9 +571,7 @@ Looking at our code, line 8 should divide dy by dx.
 > divided by the the square of **height in metres**.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
 >
@@ -620,9 +592,7 @@ Looking at our code, line 8 should divide dy by dx.
 > Patient's BMI is: 21.604938
 > ~~~
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > * The loop is not being utilised correctly. `height` and `weight` are always
 > >   set as the first patient's data during each iteration of the loop.

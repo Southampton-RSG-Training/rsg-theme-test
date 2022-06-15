@@ -302,9 +302,7 @@ the tabs '2013' and '2014', respectively.
 > > ## Keep your raw data - raw
 > > Do not forget to create a new file or a new tab for the cleaned data; never
 > > modify your original (raw) data.
-> 
-{: .callout}
-
+> {: .callout}
 >
 > > ## Solution
 > > When you finish, compare your clean spreadsheet with the structure suggested below or with
@@ -322,9 +320,7 @@ the tabs '2013' and '2014', respectively.
 > > Your cleaned spreadsheet might not be identical
 > > to either of the above, but it should have a similar overall structure. We will address the reasoning behind separating date
 > > components in 3 separate columns in [surveys.csv](https://ndownloader.figshare.com/files/2292172) in the [next episode on formatting dates in spreadsheets](../03-dates-as-data/).
-> 
-{: .solution}
-
+> {: .solution}
 {: .challenge}
 
 > ## Full & clean dataset

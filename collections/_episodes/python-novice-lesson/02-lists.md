@@ -410,18 +410,14 @@ This works but it only works if we need to build up the list in this particular 
 > Use slicing to access only the last four characters of a string or entries of a list.
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > string_for_slicing = "Observation date: 02-Feb-2013"
 > list_for_slicing = [["fluorine", "F"], ["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
 >
 >
-> 
-{: .output}
-
+> {: .output}
 > ~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
@@ -433,17 +429,13 @@ This works but it only works if we need to build up the list in this particular 
 > lengths)?
 > If not, try to change your approach to make it more robust.
 >
-> 
-{: .solution}
-
+> {: .solution}
 > >
 > > ## Solution
 > > Use negative indices to count elements from the end of a container
 > > (such as list or string):
 > >
-> > 
-> {: .python}
-> 
+> > {: .python}
 > > ~~~
 > >  string_for_slicing[-4:]
 > > list_for_slicing[-4:]
@@ -458,9 +450,7 @@ This works but it only works if we need to build up the list in this particular 
 > In particular, what will be the output of the following code?
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > counts = [2, 4, 6, 8, 10]
 > repeats = counts * 2
@@ -476,17 +466,13 @@ This works but it only works if we need to build up the list in this particular 
 > a single operator, like `+` or `*`,
 > can do different things depending on what it's applied to.
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > The multiplication operator `*` used on a list replicates elements of the
 > > list and concatenates them together:
 > >
 > >
-> > 
-> {: .output}
-> 
+> > {: .output}
 > > ~~~
 > > [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
 > > ~~~
@@ -494,9 +480,7 @@ This works but it only works if we need to build up the list in this particular 
 > > It's equivalent to:
 > >
 > >
-> > 
-> {: .python}
-> 
+> > {: .python}
 > > ~~~
 > > counts + counts
 > > ~~~
