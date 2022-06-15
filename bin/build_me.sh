@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-git checkout -b localbuild || git checkout localbuild
+git branch -d localbuild || echo 'branch local build does not exist to delete'
+git checkout -b localbuild
 
 python -m venv ./venv || echo 'venv already exists'
 
@@ -21,8 +21,8 @@ python bin/get_schedules.py
 python bin/get_setup.py
 
 # Clean the submodules out all necessary stuff has been copied.
-git rm .gitmodules
-git rm -r submodules
+git rm .gitmodules -f
+git rm -r submodules -f
 
 # Build the site.
 bundle install
