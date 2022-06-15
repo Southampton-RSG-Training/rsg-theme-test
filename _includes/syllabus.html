@@ -1,0 +1,126 @@
+{% include base_path.html %}
+
+{% comment %}
+Display syllabus in tabular form.
+Days are displayed if at least one episode has 'start = true'.
+{% endcomment %}
+
+{% include manual_episode_order.html %}
+
+<div class="syllabus">
+
+    {% assign lesson_number = 1 %}
+    {% assign day = 0 %}
+    {% assign multiday = false %}
+    {% for lesson_episode in lesson_episodes %}
+    {% if site.episode_order %}
+    {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
+    {% else %}
+    {% assign episode = lesson_episode %}
+    {% endif %}
+    {% if episode.start %}
+    {% assign multiday = true %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+
+    {% comment %}
+    If the lesson is a workshop then we want to use the start time and check for multi day if it is a course then we
+    drop that information and just provide a running time.
+    {% endcomment %}
+    {% if site.kind == "workshop" %}
+    {% assign current = include.start_time %}
+    {% else if site.kind == "course" %}
+    {% assign current = 0 %}
+    {% assign multiday = false %}
+    {% endif %}
+
+    <table class="table table-striped">
+
+        {% for lesson_episode in lesson_episodes %}
+        {% if site.episode_order %}
+        {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
+        {% else %}
+        {% assign episode = lesson_episode %}
+        {% endif %}
+
+        {% comment %}
+        This is to ignore episodes that are not for the current lesson
+        given by the variable passed in by include.name
+        {% endcomment %}
+
+        {% unless episode.slug contains include.name %}
+        {% continue %}
+        {% endunless %}
+
+        {% comment %}
+        this avoids the schedule appearing, by not including any episodes
+        that have the "schedule" layout
+        {% endcomment %}
+
+        {% if episode.layout == "schedule" %}
+        {% continue %}
+        {% endif %}
+
+        {% if episode.start %} {% comment %} Starting a new day? {% endcomment %}
+        {% assign day = day | plus: 1 %}
+        {% if day > 1 %} {% comment %} If about to start day 2 or later, show finishing time for previous day {% endcomment %}
+        {% assign hours = current | divided_by: 60 %}
+        {% assign minutes = current | modulo: 60 %}
+        <tr>
+            {% if multiday %}<td class="col-md-1"></td>{% endif %}
+            <!--<td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">
+                {% if hours < 10 %}0{% endif %}{{ hours }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}</td>-->
+            <td class="col-md-3">Finish</td>
+            <td class="col-md-7"></td>
+        </tr>
+        {% endif %}
+        {% assign current = include.start_time %} {% comment %}Re-set start time of this episode to general daily start time {% endcomment %}
+        {% endif %}
+
+        {% assign hours = current | divided_by: 60 %}
+        {% assign minutes = current | modulo: 60 %}
+
+        <tr>
+            {% if multiday %}<td class="col-md-1">{% if episode.start %}Day {{ day }}{% endif %}</td>{% endif %}
+            <!--<td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">
+            {% if hours < 10 %}0{% endif %}{{ hours }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}</td>-->
+            <td class="col-md-3">
+                {{ lesson_number }}. <a href="{{ relative_root_path }}{{ episode.url }}">{{ episode.title }}</a>
+                {% assign lesson_number = lesson_number | plus: 1 %}
+            </td>
+            <td class="col-md-7">
+                {% if episode.break %}
+                Break
+                {% else %}
+                {% if episode.questions %}
+                {% for question in episode.questions %}
+                {{question|markdownify|strip_html}}
+                {% unless forloop.last %}
+                <br />
+                {% endunless %}
+                {% endfor %}
+                {% endif %}
+                {% endif %}
+            </td>
+        </tr>
+        {% assign current = current | plus: episode.teaching | plus: episode.exercises | plus: episode.break %}
+        {% endfor %}
+
+        {% assign hours = current | divided_by: 60 %}
+        {% assign minutes = current | modulo: 60 %}
+        <tr>
+            {% if multiday %}<td class="col-md-1"></td>{% endif %}
+            <!--<td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">
+                {% if hours < 10 %}0{% endif %}{{ hours }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}</td>-->
+            <td class="col-md-3">Finish</td>
+            <td class="col-md-7"></td>
+        </tr>
+
+    </table>
+
+    <p>
+        The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+    </p>
+
+</div>

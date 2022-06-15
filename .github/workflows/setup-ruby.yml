@@ -1,0 +1,24 @@
+name: Setup Ruby environment
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+jobs:
+  setup-ruby:
+    if: ${{ !endsWith(github.repository, '/styles') }}
+    runs-on: ubuntu-20.04
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ inputs.version }}

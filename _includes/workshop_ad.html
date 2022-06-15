@@ -1,0 +1,47 @@
+{% comment %}
+  Advertising box at the top of a workshop website home site.
+{% endcomment %}
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      {% unless site.title == "Workshop Title" or site.title == "" %}
+      <h1>{{site.title}}</h1>
+      {% endunless %}
+      {% if site.kind == "course" %}
+      <h2>Self-learning course</h2>
+      {% elsif site.venue == "online" %}
+      <h2>Online</h2>
+      {% else %}
+      <h2>{{site.venue}}</h2>
+      {% endif %}
+      <div class="row">
+        <div class="col-md-6">
+          {% if site.venue == "online" %}
+          <p><a href="{{site.address}}">{{site.platform-name}}</a></p>
+          {% else %}
+          <p>{{site.address}}</p>
+          {% endif %}
+          <p>{{site.humandate}}</p>
+          <p>{% if site.humantime %}{{site.humantime}}{% endif %}</p>
+        </div>
+        <div class="col-md-6">
+          <p>
+          <strong>Instructors:</strong>
+          {% if site.instructor %}
+          {{site.instructor | join: ', ' %}}
+          {% else %}
+          to be announced.
+          {% endif %}
+          </p>
+          {% if site.helper %}
+          <p>
+          <strong>Helpers:</strong>
+          {{site.helper | join: ', ' %}}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+# Which carpentry is this ("swc", "dc", "lc", or "cp")?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor traning for instance)
+carpentry: "dc"
+
+# order is critical
+setup_docs:
+  - install_r.md
+
+# Using the new jekyll remote themes
+remote_theme: carpentries/carpentries-theme
+
+exclude:
+  - submodules/
