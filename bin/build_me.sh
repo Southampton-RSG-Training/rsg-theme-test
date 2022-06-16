@@ -28,9 +28,9 @@ git rm -r submodules -f
 bundle install
 bundle exec jekyll serve
 
-rm -r _site/
-rm -r venv/
-rm -r _includes/rsg/*-lesson/
+rm setup.md
+rm -r _site/ venv/ collections/ fig/ _includes/rsg/*-lesson/ slides/
+find -f ./data \! -name "*.md" -depth 1 -delete
 rm assets/favicons/rsg/apple* assets/favicons/rsg/favicon* assets/favicons/rsg/mstile*
 
 git checkout main
