@@ -104,6 +104,7 @@ collections_dir: collections
 
 include:
   - _includes/rsg/
+  - _includes/
 
 # If there is both an R and python official version of a curriculum
 # (as listed on https://software-carpentry.org/lessons/ and
@@ -205,9 +206,6 @@ exclude:
   - vendor/
   - .docker-vendor/
   - submodules/
-
-# Turn on built-in syntax highlighting.
-highlighter: rouge
 
 plugins:
   - jekyll-sitemap
