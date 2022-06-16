@@ -29,7 +29,7 @@ bundle install
 bundle exec jekyll serve
 
 rm setup.md
-rm -r _site/ venv/ collections/ fig/ _includes/rsg/*-lesson/ slides/ _includes/
+rm -r _site/ venv/ collections/ fig/ _includes/rsg/*-lesson/ slides/ _includes/ submodules/
 find -f ./data \! -name "*.md" -depth 1 -delete
 rm assets/favicons/rsg/apple* assets/favicons/rsg/favicon* assets/favicons/rsg/mstile*
 
