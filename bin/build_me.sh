@@ -26,7 +26,7 @@ git rm -r submodules/ -f
 
 # Build the site.
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl=""
 
 rm setup.md
 rm -r _site/ venv/ collections/ fig/ _includes/rsg/*-lesson/ slides/ _includes/ submodules/
