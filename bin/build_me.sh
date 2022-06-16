@@ -34,3 +34,4 @@ find -f ./data \! -name "*.md" -depth 1 -delete
 rm assets/favicons/rsg/apple* assets/favicons/rsg/favicon* assets/favicons/rsg/mstile*
 
 git checkout main
+git branch -d localbuild || echo 'branch local build does not exist to delete'
