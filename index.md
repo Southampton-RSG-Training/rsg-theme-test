@@ -1,3 +1,3 @@
 ---
 ---
-{% includes _boilerplate/index.md %}
+{% include _boilerplate/index.md %}

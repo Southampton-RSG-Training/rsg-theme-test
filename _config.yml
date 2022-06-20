@@ -208,4 +208,5 @@ exclude:
   - submodules/
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-sitemap

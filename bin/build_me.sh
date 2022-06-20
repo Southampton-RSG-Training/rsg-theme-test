@@ -21,8 +21,6 @@ python bin/get_schedules.py
 python bin/get_setup.py
 
 
-
-
 # Build the site.
 bundle install
 bundle exec jekyll serve --baseurl=""
