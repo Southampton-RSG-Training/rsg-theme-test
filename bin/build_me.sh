@@ -25,9 +25,7 @@ python bin/get_setup.py
 bundle install
 bundle exec jekyll serve --baseurl=""
 
-# Clean the submodules out, all necessary stuff has been copied.
-git rm -r submodules/ -f
-git rm .gitmodules -f
+# Clean the things not tracked by git
 rm setup.md
 rm -r _site/ venv/ collections/ fig/ _includes/rsg/*-lesson/ slides/ _includes/ submodules/
 find -f ./data \! -name "*.md" -depth 1 -delete
