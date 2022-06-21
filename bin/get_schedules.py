@@ -161,20 +161,38 @@ def create_index_schedules(schedules):
     n_rows = math.ceil(n_lessons / 2)
     ordered_schedules = sorted(schedules, key=lambda x: x["order_on"])
 
+    # Split into LHS/Top and RHS/Bottom
     left = ordered_schedules[:n_rows]
     right = ordered_schedules[n_rows:]
-    for i in range(n_rows):
-        left[i]["schedule"] = left[i]["schedule"].replace("col-md-6", f"col-md-6 order-sm-first")
-        if i < len(right):
-            right[i]["schedule"] = right[i]["schedule"].replace("col-md-6", f"col-md-6 order-sm-last")
 
     html = ""
+    # Make the container to hold the schedules 'table'
     html += "<div class=\"container\">"
-    html += "<div class=\"row\">"
-    for i in range(n_rows):
-        html += left[i]["schedule"]
-        if i < len(right):
-            html += right[i]["schedule"]
+    # Start a row that expects 2 columns at medium and above and one below
+    html += "<div class=\"row row-cols-1 row-cols-md-2\">"
+
+    # Start a column to contain the courses that should appear on the left in 2 column layout or top in 1 column layout.
+    html += "<div class=\"col\">"
+    # Start a nested row with ony one column
+    html += "<div class=\"row row-cols-1\">"
+    for thing in left:
+        html += thing["schedule"]
+    # Close the LHS/top
+    html += "</div>"
+    html += "</div>"
+
+    # Start a column to contain the courses that should appear on the right in 2 column layout or bottom in 1 column
+    # layout.
+    html += "<div class=\"col\">"
+    # Start a nested row with ony one column
+    html += "<div class=\"row row-cols-1\">"
+    for thing in right:
+        html += thing["schedule"]
+    # Close the RHS/bottom
+    html += "</div>"
+    html += "</div>"
+
+    # Close the main row and container
     html += "</div>"
     html += "</div>"
 
@@ -285,7 +303,7 @@ def main():
                     title = f"'{lesson_title}'"
 
                 table = f"""
-                <div class="col-md-6">
+                <div class="col">
                     <a href="{lesson_name}-schedule"><h3>{title}</h3></a>
                     <h4>{datestr}</h4>
                     <table class="table table-striped">
@@ -315,7 +333,7 @@ def main():
                 blurb = "See course schedule for lesson details"
 
             table = f"""
-                <div class="col-md-6">
+                <div class="col">
                     <a href="{lesson_name}-schedule"><h3>{lesson_title}</h3></a>
                     {blurb}
                 </div>

@@ -8,5 +8,5 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby '>=2.7.3'
 
 gem 'github-pages', group: :jekyll_plugins
-
+gem 'jekyll-remote-theme'
 gem "webrick", "~> 1.7"

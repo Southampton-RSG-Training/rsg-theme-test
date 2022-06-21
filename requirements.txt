@@ -6,3 +6,4 @@ html5lib
 python-dateutil
 lxml
 favicons
+requests
