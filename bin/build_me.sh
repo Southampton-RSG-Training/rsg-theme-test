@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 git branch -d localbuild || echo 'branch local build does not exist to delete'
 git checkout -b localbuild
 
@@ -19,7 +20,6 @@ python bin/get_submodules.py
 python bin/make_favicons.py
 python bin/get_schedules.py
 python bin/get_setup.py
-
 
 # Build the site.
 bundle install
