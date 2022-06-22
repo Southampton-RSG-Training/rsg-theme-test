@@ -11,6 +11,7 @@ kind: "course"
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
 title: "TBC Workshop Title"
+form_title: "TBC+Workshop+Title" # NO SPACES USE '+' #This can be different to the workshop title it will appear in the Google Form
 
 # Specify the location of the workshop
 # TODO: needs documenting a lot better
@@ -25,7 +26,7 @@ longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 # Specify the start and end date of the workshop
 humandate: "TBC"      # e.g. "6th August"
 humantime: "TBC"      # e.g. "09:00-17:00"
-startdate: "TBC"        # e.g. YYYY-MM-DD
+startdate: "TBC"        # e.g. YYYY-MM-DD # This is used in the Google Form it must have the described format
 enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Specify the details of the instructors and helpers
@@ -210,3 +211,4 @@ exclude:
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
+  - jekyll-include-cache
