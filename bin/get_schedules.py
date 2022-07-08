@@ -242,7 +242,6 @@ def main():
             if website_kind == 'course':
                 raise ValueError(f"lesson_name, lesson_title, lesson_order are required for course")
 
-
         # Since we allow multiple dates and start times per lesson, we need to be
         # able to iterate over even single values so turn into list. When done,
         # convert the dates from str to datetime.date objects.
