@@ -7,11 +7,14 @@ kind: "course"
 # Overall title for the Workshop.
 # This variable is used to (optionally) add a title in the "jumbotron"
 # (the grey box at the top of the page), and to the extra pages.
+
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
 title: "TBC Workshop Title"
-form_title: "TBC+Workshop+Title" # NO SPACES USE '+' #This can be different to the workshop title it will appear in the Google Form
+
+# Email address, no mailto:
+email: "rsginfo@soton.ac.uk"
 
 # Specify the location of the workshop
 # TODO: needs documenting a lot better
@@ -26,7 +29,7 @@ longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 # Specify the start and end date of the workshop
 humandate: "TBC"      # e.g. "6th August"
 humantime: "TBC"      # e.g. "09:00-17:00"
-startdate: "TBC"        # e.g. YYYY-MM-DD # This is used in the Google Form it must have the described format
+startdate: "TBC"        # e.g. YYYY-MM-DD
 enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Specify the details of the instructors and helpers
@@ -96,6 +99,24 @@ lessons:
       - 10:00 am
     order: 6
 
+  - title: Data Analysis and Visualization in R
+    gh-name: r-novice
+    type: episode_r
+    branch: main
+    date:
+      - 15 January 2022
+      - 16 January 2022
+      - 17 January 2022
+    start-time:
+      - 15:00
+      - 15:00
+      - 15:00
+    order: 7
+
+###
+# It is unlikely you need to modify the values below this line
+###
+
 # Specify that things in the episodes collection should be output.
 collections:
   episodes:
@@ -105,7 +126,6 @@ collections_dir: collections
 
 include:
   - _includes/rsg/
-  - _includes/
 
 # If there is both an R and python official version of a curriculum
 # (as listed on https://software-carpentry.org/lessons/ and
@@ -119,25 +139,6 @@ flavor: "python"
 # a lesson in The Carpentries Incubator), set pilot to "true".
 pilot: false
 
-#------------------------------------------------------------
-# Incubator workshop settings (only relevant for workshops teaching a lesson
-# in The Carpentries Incubator).
-#
-# For an Incubator workshop, uncomment the line below and add the URL of the lesson site.
-# incubator_lesson_site: "put the URL of the lesson being taught here"
-#
-# For an Incubator workshop, uncomment the line below and add the URL of your pre-workshop survey
-# incubator_pre_survey: "put the URL of your pre-workshop survey here"
-#
-# For an Incubator workshop, uncomment the line below and add the URL of your post-workshop survey
-# incubator_post_survey: "put the URL of your post-workshop survey here"
-#
-#------------------------------------------------------------
-
-#------------------------------------------------------------
-# Generic settings (should not need to change).
-#------------------------------------------------------------
-
 # rsg: Custom Lessons from the Southampton-RSG-Training git-org
 carpentry: "rsg"
 
@@ -145,12 +146,6 @@ carpentry: "rsg"
 # See https://help.github.com/articles/repository-metadata-on-github-pages/.
 # Please don't change it: <USERNAME>/<PROJECT> is correct.
 repository: <USERNAME>/<PROJECT>
-
-# Email address, no mailto:
-email: "rsginfo@soton.ac.uk"
-
-# Using the new jekyll remote themes
-remote_theme: Southampton-RSG-Training/rsg-theme
 
 # Sites.
 amy_site: "https://amy.carpentries.org/"
@@ -171,10 +166,6 @@ training_site: "https://carpentries.github.io/instructor-training"
 workshop_repo: "https://github.com/carpentries/workshop-template"
 workshop_site: "https://carpentries.github.io/workshop-template"
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
-
-# Surveys.
-pre_survey: "https://carpentries.typeform.com/to/wi32rS?slug="
-post_survey: "https://carpentries.typeform.com/to/UgVdRQ?slug="
 
 # Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
 start_time: 0
@@ -207,6 +198,12 @@ exclude:
   - vendor/
   - .docker-vendor/
   - submodules/
+
+# Turn on built-in syntax highlighting.
+highlighter: rouge
+
+# Using the new jekyll remote themes
+remote_theme: Southampton-RSG-Training/rsg-theme
 
 plugins:
   - jekyll-remote-theme

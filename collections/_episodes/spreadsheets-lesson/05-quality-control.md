@@ -102,7 +102,9 @@ option on the `Error Alert` tab (or the `Action` field in LibreOffice).
 > > You have now provided a restriction that will be validated each time you try and
 > > enter data into the selected cells. If you type a value which is not on the list you will get an error message.
 > > This not only prevents data input errors, but also makes it easier and faster to enter data.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 ### Restricting data to entries from a list
@@ -137,7 +139,9 @@ values, you can select the right option from the list every time. Let’s apply 
 > > You have now provided a restriction that will be validated each time you try and
 > > enter data into the selected cells. If you type a value which is not on the list you will get an error message.
 > > This not only prevents data input errors, but also makes it easier and faster to enter data.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 Typing a list of values where only a few possible values exist might be convenient, but if the list is longer (e.g.
@@ -207,7 +211,9 @@ If your dataset is well-structured and does not contain formulas, sorting should
     The cells containing no data values sort to the bottom of the tabular data, while the cells where the letter
     "g" was included can be found towards the top or bottom. This is a powerful way to check your data for outliers and odd values.
     ![Image of outliers sorted at the top](fig/sort-result.png)
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 ### Conditional formatting
@@ -235,7 +241,9 @@ entering data. Let's apply some to our data.
    included and the empty cells. They show up at either at the top or at the bottom of the data but may not be as easy to
    spot if you have a very large dataset and have to scroll a lot.
        ![Image of Conditional Formatting - result](fig/conditional-formatting-result.png)
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 > ## Scanning for outliers

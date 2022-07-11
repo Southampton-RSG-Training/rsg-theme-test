@@ -1,0 +1,8 @@
+^requirements\.txt$
+^renv$
+^renv\.lock$
+^\.travis\.yml$
+^tic\.R$
+SlidePNGs/
+Videos/
+^\.github$

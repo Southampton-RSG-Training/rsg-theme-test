@@ -54,7 +54,9 @@ You can also filter data using other types of facets - let's do it as an exercis
 > >
 >   ![OpenRefine Scatterplot Filter](fig/scatterplot-filter.png)
 > >
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 ### Text filters
@@ -84,7 +86,9 @@ and reinstate the text facet on the `scientificName` column.
 > > You could include more letters in your filter, e.g. `baio` which would exclude `Chaetodipus baileyi`. Try playing with these different options.
 > > You could include more letters in your filter, e.g. `baio` which would exclude `Chaetodipus baileyi`. Try playing with these different options.
 > >
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 **Important:** Make sure both species are included in your filtered dataset before continuing with the rest of the exercises.
@@ -129,7 +133,9 @@ specify where to place Blanks and Errors in the sorted results.
 > > This is because sorting only rearranges the order of the data, it doesn't change its content. This means 
 > > the sorting will not change the cells in a column from text to numbers - rather, it will interpret the
 > > values as numbers for the purposes of sorting, but will keep the underlying data type unchanged.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 The first time you sort a column, the first option will present as `Sort...`. If you re-sort a column that you
@@ -156,7 +162,9 @@ you remove the sort.
 > > From the drop-down menu on the column `plot` select `Sort...` then `Sort cell values as numbers` and `smallest first`. 
 > > The years observations were recorded in plot 1 are 1990 and 1995.
 > > 
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 ### Sorting by multiple columns
@@ -186,7 +194,9 @@ alone` box in the `Sort` pop-up menu.
 > > 4. To ensure
 > > that all entries are shown chronologically, you will need to add a third sorting step to sort data by day (using the column `dy`). 
 > > 
-> {: .solution}  
+> 
+{: .solution}
+  
 {: .challenge}
 
 If you go back to one of the already sorted columns and select `Sort` > `Remove sort`, that column is removed from

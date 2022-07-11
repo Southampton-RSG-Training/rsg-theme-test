@@ -29,3 +29,7 @@
 	path = submodules/setup-documents
 	url = https://github.com/Southampton-RSG-Training/setup-documents.git
 	branch = main
+[submodule "submodules/r-novice"]
+	path = submodules/r-novice
+	url = https://github.com/Southampton-RSG-Training/r-novice.git
+	branch = main

@@ -50,7 +50,9 @@ $ today_date=$(date +“%d-%m-%y”)
 > > ## Solution
 > > If we assume the output directory is named `copied`:
 > >
-> > {: .bash}
+> > 
+> {: .bash}
+> 
 > > ~~~
 > > today_date=$(date +"%d-%m-%y")
 > >
@@ -61,7 +63,9 @@ $ today_date=$(date +“%d-%m-%y”)
 > > done
 > > ~~~
 > >
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 
@@ -88,7 +92,9 @@ The `-d` argument specifies, within quotes, the delimiter that separates the col
 > > The `Max_temp_jul_F` column is the fourth column in each data file
 > > If we assume the input directory is named `copied` and the output directory is named `filtered`:
 > >
-> >{: .bash}
+> >
+{: .bash}
+
 > >~~~
 > >for file in copied/*.csv
 > >do
@@ -97,7 +103,9 @@ The `-d` argument specifies, within quotes, the delimiter that separates the col
 > >done
 > >~~~
 > >
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 {% include links.md %}

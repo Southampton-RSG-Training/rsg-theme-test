@@ -316,7 +316,9 @@ wc -l "$@" | sort -n
 > (and potentially getting them wrong)
 > we can do this:
 >
-> {: .bash}
+> 
+{: .bash}
+
 >~~~
 > $ history | tail -4 > redo-figure-3.sh
 > ~~~
@@ -380,7 +382,9 @@ wc -l "$@" | sort -n
 > > head -1 *.pdb
 > > tail -n -1 *.pdb*
 > > ~~~
-> > {: .bash}
+> > 
+> {: .bash}
+> 
 > >
 > > This prints out the first line (`head -1`) of each `.pdb` file, and then the last line of each `.pdb` file.
 > >
@@ -388,18 +392,24 @@ wc -l "$@" | sort -n
 > > ~~~
 > > bash script.sh *.pdb -1 -1
 > > ~~~
-> > {: .bash}
+> > 
+> {: .bash}
+> 
 > >
 > > Then it wouldn't work as the wildcard would've expanded before the script started and we'd have effectively run it as:
 > >
 > > ~~~
 > > bash script cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb -1 -1
 > > ~~~
-> > {: .bash}
+> > 
+> {: .bash}
+> 
 > >
 > > This would have caused an error, as we expect the second and third arguments to be numbers for `head` and `tail`!
 > >
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 > ## Script reading comprehension
@@ -413,7 +423,9 @@ wc -l "$@" | sort -n
 > # Script 1
 > echo *.*
 > ~~~
-> {: .bash}
+> 
+{: .bash}
+
 >
 > ~~~
 > # Script 2
@@ -422,13 +434,17 @@ wc -l "$@" | sort -n
 >     cat $filename
 > done
 > ~~~
-> {: .bash}
+> 
+{: .bash}
+
 >
 > ~~~
 > # Script 3
 > echo $@.dat
 > ~~~
-> {: .bash}
+> 
+{: .bash}
+
 >
 > > ## Solution
 > >
@@ -437,7 +453,9 @@ wc -l "$@" | sort -n
 > > ~~~
 > > example.sh fructose.dat glucose.dat sucrose.dat
 > > ~~~
-> > {: .output}
+> > 
+> {: .output}
+> 
 > >
 > > **Script 2** makes use of our arguments. The wildcard `*.dat` matches any file that ends in `.dat`, so expands to `fructose.dat glucose.dat sucrose.dat` then passes them to the script. The script then takes the first 3 arguments (using `$1 $2 $3`) and uses `cat` to print the contents of the file. However, if there are less than 3 files in the directory with the `.dat` suffix, they'll be ignored. If there are *less* than 3, there'll be an error!
 > >
@@ -446,10 +464,14 @@ wc -l "$@" | sort -n
 > > ~~~
 > > fructose.dat glucose.dat sucrose.dat.dat
 > > ~~~
-> > {: .output}
+> > 
+> {: .output}
+> 
 > >
 > > This probably isn't quite what we were hoping for!
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 {% include links.md %}

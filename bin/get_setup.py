@@ -33,7 +33,7 @@ for n, lesson_info in enumerate(website_config['lessons']):
 with open("setup.md", "w") as file_out:
     file_out.write('# Setup for all episodes.')
     for i in range(len(set_up_docs)):
-        doc = 'submodules/setup-documents/markdown/'+ set_up_docs[i]
+        doc = 'submodules/setup-documents/markdown/' + set_up_docs[i]
         with open(doc, "r") as file_in:
             file_out.write("\n")
             file_out.write(file_in.read())
