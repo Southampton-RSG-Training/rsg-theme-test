@@ -12,6 +12,7 @@ kind: "course"
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
 title: "TBC Workshop Title"
+form_title: "TBC+Workshop+Title" # This is required for the surveys
 
 # Email address, no mailto:
 email: "rsginfo@soton.ac.uk"
@@ -29,7 +30,7 @@ longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 # Specify the start and end date of the workshop
 humandate: "TBC"      # e.g. "6th August"
 humantime: "TBC"      # e.g. "09:00-17:00"
-startdate: "TBC"        # e.g. YYYY-MM-DD
+startdate: "1990-01-01"        # e.g. YYYY-MM-DD # This is required for the surveys
 enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Specify the details of the instructors and helpers
