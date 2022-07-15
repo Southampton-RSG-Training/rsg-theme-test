@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+# Developer note: This is a local build file that broadly replicates the processes in the .github/workflows/website.yml
+#                 if you are editing this file to make a local build work then the corresponding changes must be made in
+#                 the github workflow.
+
+# Make a branch to build on to avoid messing up main
 git branch -d localbuild || echo 'branch local build does not exist to delete'
 git checkout -b localbuild
 
+# Replicate GH actions
 python -m venv ./venv || echo 'venv already exists'
 
 #TODO: Make this windows safe
