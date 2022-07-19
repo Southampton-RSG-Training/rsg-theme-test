@@ -2,9 +2,8 @@
 lesson_title: 'Best Practices in Data Organisation Using Spreadsheets'
 lesson_schedule_slug: spreadsheets-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: spreadsheets-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}

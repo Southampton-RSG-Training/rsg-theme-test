@@ -2,9 +2,8 @@
 lesson_title: 'Data Cleaning with OpenRefine'
 lesson_schedule_slug: openrefine-data-cleaning-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: openrefine-data-cleaning-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}

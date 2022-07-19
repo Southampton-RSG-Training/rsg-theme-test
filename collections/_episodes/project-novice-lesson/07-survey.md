@@ -2,9 +2,8 @@
 lesson_title: 'Managing Academic Software Development'
 lesson_schedule_slug: project-novice-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: project-novice-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}

@@ -2,9 +2,8 @@
 lesson_title: 'Automating Tasks with the Unix Shell'
 lesson_schedule_slug: shell-novice-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: shell-novice-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}

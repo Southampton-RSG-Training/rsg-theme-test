@@ -2,9 +2,8 @@
 lesson_title: 'Version Control with git'
 lesson_schedule_slug: git-novice-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: git-novice-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}

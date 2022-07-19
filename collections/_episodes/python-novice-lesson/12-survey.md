@@ -2,9 +2,8 @@
 lesson_title: 'Building Programs with Python'
 lesson_schedule_slug: python-novice-schedule
 title: "Survey"
-slug: "lesson-survey"
-teaching: 0
-exercises: 0
+slug: python-novice-survey
+layout: page
 ---
 
 {% if site.startdate == "TBC" %}
